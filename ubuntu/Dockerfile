@@ -31,7 +31,7 @@ RUN set -ex; \
 RUN groupadd -r tkerns --gid=999 && useradd -r -g tkerns --uid=999 tkerns
 
 COPY docker-entrypoint.sh /
-# RUN chmod a+x 
+RUN chmod a+x docker-entrypoint.sh
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 # RUN addgroup --gid 1000 tony && \
