@@ -28,7 +28,9 @@ RUN set -ex; \
 	\
 	apt-get purge -y --auto-remove $fetchDeps
 
-RUN addgroup --gid 1000 tony && \
-    adduser --gid 1000 --uid 1000 --disabled-password --gecos '' --no-create-home tony
+# RUN addgroup --gid 1000 tony && \
+#     adduser --gid 1000 --uid 1000 --disabled-password --gecos '' --no-create-home tony
 
-USER tony
+RUN groupadd -r tkerns --gid=999 && useradd -r -g tkerns --uid=999 tkerns
+
+USER tkerns
