@@ -31,6 +31,6 @@ RUN set -ex; \
 # RUN addgroup --gid 1000 tony && \
 #     adduser --gid 1000 --uid 1000 --disabled-password --gecos '' --no-create-home tony
 
-RUN groupadd -r tkerns --gid=999 && useradd -r -g tkerns --uid=999 tkerns
+# RUN groupadd -r tkerns --gid=999 && useradd -r -g tkerns --uid=999 tkerns
 
-USER tkerns
+# USER tkerns
