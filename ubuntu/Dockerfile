@@ -28,6 +28,9 @@ RUN set -ex; \
 	\
 	apt-get purge -y --auto-remove $fetchDeps
 
+COPY docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["docker-entrypoint.sh"]
+
 # RUN addgroup --gid 1000 tony && \
 #     adduser --gid 1000 --uid 1000 --disabled-password --gecos '' --no-create-home tony
 
