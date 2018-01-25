@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    ubuntu:
+        build:
+            context: ubuntu
+            args:
+                - UBUNTU_VERSION=16.04
+        image: ubuntu_gosu
+        container_name: ubuntu_gosu1
