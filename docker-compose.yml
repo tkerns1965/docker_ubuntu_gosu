@@ -8,3 +8,5 @@ services:
                 - UBUNTU_VERSION=16.04
         image: ubuntu_gosu
         container_name: ubuntu_gosu1
+        volumes:
+            - /mnt/nfs/svr1/documents:/mnt/nfs_svr1_documents
